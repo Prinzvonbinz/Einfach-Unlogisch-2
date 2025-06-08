@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#app {
+  max-width: 800px;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.spin {
+  display: inline-block;
+  animation: spin 3s linear infinite;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.zoom-in {
+  animation: zoom 10s forwards;
+  font-size: 3em;
+}
+
+@keyframes zoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(20); }
+}
+
+.loader {
+  border: 8px solid #444;
+  border-top: 8px solid white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+.a-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  font-size: 2em;
+}
